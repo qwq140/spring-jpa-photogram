@@ -57,7 +57,7 @@ public class UserApiController {
 			@Valid UserUpdateDto userUpdateDto, 
 			BindingResult bindingResult, // 꼭 @Valid가 적혀있는 다음 파라메터 적어야됨
 			@AuthenticationPrincipal PrincipalDetails principalDetails) {
-		System.out.println(userUpdateDto);
+		//System.out.println(userUpdateDto);
 		if(bindingResult.hasErrors()) {
 			Map<String, String> errorMap = new HashMap<>();
 			for(FieldError error : bindingResult.getFieldErrors()) {

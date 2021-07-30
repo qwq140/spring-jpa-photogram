@@ -194,7 +194,8 @@ function addComment(imageId) {
 		`;
 		commentList.prepend(content); // 앞쪽에 추가 , append : 뒤쪽에 추가
 	}).fail(error=>{
-		console.log("오류",error);
+		//console.log("오류",error.responseJSON.data.content);
+		alert(error.responseJSON.data.content);
 	});
 
 
