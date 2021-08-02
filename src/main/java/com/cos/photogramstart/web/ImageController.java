@@ -46,6 +46,7 @@ public class ImageController {
 	@PostMapping("/image")
 	public String imageUpload(ImageUploadDto imageUploadDto, @AuthenticationPrincipal PrincipalDetails principalDetails) {
 		// 서비스 호출
+		// 공통코드가 아니므로 그냥 둠
 		if(imageUploadDto.getFile().isEmpty()) {
 			throw new CustomValidationException("이미지가 첨부되지 않았습니다.", null);
 		}
